@@ -1,0 +1,84 @@
+object FormCadastroPai: TFormCadastroPai
+  Left = 0
+  Top = 0
+  BorderStyle = bsSingle
+  Caption = 'FormCadastroPai'
+  ClientHeight = 478
+  ClientWidth = 979
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnCabecalho: TPanel
+    Left = 0
+    Top = 408
+    Width = 979
+    Height = 70
+    Align = alBottom
+    TabOrder = 0
+    object BitBtn1: TBitBtn
+      Left = 24
+      Top = 8
+      Width = 113
+      Height = 56
+      Caption = 'Novo'
+      TabOrder = 0
+      OnClick = BitBtn1Click
+    end
+    object BitBtn2: TBitBtn
+      Left = 152
+      Top = 8
+      Width = 113
+      Height = 56
+      Caption = 'Gravar'
+      TabOrder = 1
+      OnClick = BitBtn2Click
+    end
+    object BitBtn3: TBitBtn
+      Left = 280
+      Top = 8
+      Width = 113
+      Height = 56
+      Caption = 'Cancelar'
+      TabOrder = 2
+    end
+    object BitBtn4: TBitBtn
+      Left = 840
+      Top = 7
+      Width = 113
+      Height = 56
+      Caption = 'Sair'
+      TabOrder = 3
+    end
+    object BitBtn5: TBitBtn
+      Left = 408
+      Top = 8
+      Width = 113
+      Height = 56
+      Caption = 'Excluir'
+      TabOrder = 4
+    end
+  end
+  object fdQryCadastro: TFDQuery
+    Connection = dmDados.fdCon
+    UpdateObject = fdUpdCadastro
+    Left = 424
+    Top = 176
+  end
+  object fdUpdCadastro: TFDUpdateSQL
+    Connection = dmDados.fdCon
+    Left = 520
+    Top = 176
+  end
+  object FDTransaction1: TFDTransaction
+    Connection = dmDados.fdCon
+    Left = 600
+    Top = 176
+  end
+end
